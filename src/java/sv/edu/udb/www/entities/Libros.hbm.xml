@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-oct-2021 15:09:00 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sv.edu.udb.www.entities.Libros" table="libros" catalog="taller2_dse" optimistic-lock="version">
+        <id name="codigo" type="string">
+            <column name="Codigo" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="100" not-null="true" />
+        </property>
+        <property name="autor" type="string">
+            <column name="Autor" length="250" not-null="true" />
+        </property>
+        <property name="editorial" type="string">
+            <column name="Editorial" length="50" not-null="true" />
+        </property>
+        <property name="precio" type="string">
+            <column name="Precio" length="10" not-null="true" />
+        </property>
+        <property name="existencias" type="int">
+            <column name="Existencias" not-null="true" />
+        </property>
+        <property name="genero" type="string">
+            <column name="Genero" length="150" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
